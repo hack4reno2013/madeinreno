@@ -1,0 +1,33 @@
+<Alloy>
+	<Tab title="Stores" icon="images/airplane.png">
+		<Window title="Stores" onOpen="open">
+			<View ns="Ti.Map" id="map">
+				<!-- annotation styled via tss file -->
+				<!-- <Annotation id="annotation1"/> -->
+
+				<!-- annotation styles via inline style -->
+				<Annotation title="Pneumatic Diner" latitude="39.524450" longitude="-119.819610"/>
+				<Annotation title="Classic Skate Shop" latitude="39.518327" longitude="-119.809545"/>
+				<Annotation title="NeverEnder" latitude="39.519286" longitude="-119.807642"/>
+				<Annotation title="Great Full Gardens" latitude="39.519204" longitude="-119.810351"/>
+				<Annotation title="Junkee" latitude="39.515419" longitude="-119.807498"/>
+				<Annotation title="Too Soul Tea" latitude="39.519264" longitude="-119.81237"/>
+				<Annotation title="Poleletics" latitude="39.528069" longitude="-119.834731"/>
+				
+				<!-- platform-specific annotations -->
+				<!-- <Annotation id="annotation2" platform="android"/> -->
+				<!-- <Annotation id="annotation3" platform="ios"/> -->
+
+				<!-- annotation via <Require> tag -->
+				<!-- <Require src="annotationView" title="Sunnyvale" latitude="37.37" longitude="-122.03"/> -->
+
+				<!--
+				Lets add a UI component to show Annotations being declared
+				side-by-side with child components. Map subviews will appear
+				on iOS only.
+				-->
+				<!-- <Require src="overlay" platform="ios"/> -->
+			</View>
+		</Window>
+	</Tab>
+</Alloy>

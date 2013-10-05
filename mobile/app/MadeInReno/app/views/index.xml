@@ -1,0 +1,8 @@
+<Alloy>
+	<TabGroup>
+		<Require src="card"/>
+		<Require src="rewards"/>
+		<Require src="stores"/>
+		<Require src="settings"/>
+	</TabGroup>
+</Alloy>

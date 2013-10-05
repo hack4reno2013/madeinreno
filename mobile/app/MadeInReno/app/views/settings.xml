@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab title="Settings" icon="images/airplane.png">
+		<Window title="Settings">
+			<Label>Settings</Label>
+		</Window>
+	</Tab>
+</Alloy>

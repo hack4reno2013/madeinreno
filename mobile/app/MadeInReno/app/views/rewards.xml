@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab title="Rewards" icon="images/airplane.png">
+		<Window title="Rewards">
+			<Label>Rewards</Label>
+		</Window>
+	</Tab>
+</Alloy>
