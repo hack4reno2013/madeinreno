@@ -1,7 +1,12 @@
 <Alloy>
-	<Tab title="Settings" icon="images/airplane.png">
+	<Tab title="Settings" icon="images/settings_off.png">
 		<Window title="Settings">
-			<Label>Settings</Label>
+			<ScrollView width="Ti.UI.SIZE" height="Ti.UI.SIZE">
+				<View layout="vertical">
+					<Label top="10">Made In Reno</Label>
+					<Label id="version" top="10">Version: 1.0</Label>
+				</View>
+			</ScrollView>
 		</Window>
 	</Tab>
 </Alloy>

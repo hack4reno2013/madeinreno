@@ -1,6 +1,6 @@
 <Alloy>
-	<Tab title="Stores" icon="images/airplane.png">
-		<Window title="Stores" onOpen="open">
+	<Tab title="Stores" icon="images/store_off.png">
+		<Window title="Booty Stores" onOpen="open">
 			<View ns="Ti.Map" id="map">
 				<!-- annotation styled via tss file -->
 				<!-- <Annotation id="annotation1"/> -->

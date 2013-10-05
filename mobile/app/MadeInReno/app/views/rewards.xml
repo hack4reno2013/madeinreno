@@ -1,7 +1,21 @@
 <Alloy>
-	<Tab title="Rewards" icon="images/airplane.png">
-		<Window title="Rewards">
-			<Label>Rewards</Label>
+	<Tab title="Rewards" icon="images/rewards_off.png">
+		<Window title="Booty Rewards">
+			<View layout="vertical">
+				<View width="Ti.UI.FILL" height="Ti.UI.SIZE">
+					<Label top="10">Reno Booty Rewards</Label>
+				</View>
+				<View left="25%" top="10" height="Ti.UI.SIZE" width="Ti.UI.FILL" layout="horizontal" horizontalWrap="false">
+					<ImageView left="5" top="5" image="images/glyphicons_012_heart.png"/>
+					<ImageView left="5" top="5" image="images/glyphicons_012_heart.png"/>
+					<ImageView left="5" top="5" image="images/glyphicons_012_heart.png"/>
+					<ImageView left="5" top="5" image="images/glyphicons_012_heart.png"/>
+					<ImageView left="5" top="5" image="images/glyphicons_012_heart.png"/>
+				</View>
+				<View width="Ti.UI.FILL" height="Ti.UI.SIZE">
+					<Label top="10">4 more Hearts needed to achive Red booty level</Label>
+				</View>
+			</View>
 		</Window>
 	</Tab>
 </Alloy>

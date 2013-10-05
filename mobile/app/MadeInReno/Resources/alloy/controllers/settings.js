@@ -6,12 +6,23 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.__alloyId13 = Ti.UI.createWindow({
+    $.__views.__alloyId29 = Ti.UI.createWindow({
         backgroundColor: "#fff",
         title: "Settings",
-        id: "__alloyId13"
+        id: "__alloyId29"
     });
-    $.__views.__alloyId14 = Ti.UI.createLabel({
+    $.__views.__alloyId30 = Ti.UI.createScrollView({
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        id: "__alloyId30"
+    });
+    $.__views.__alloyId29.add($.__views.__alloyId30);
+    $.__views.__alloyId31 = Ti.UI.createView({
+        layout: "vertical",
+        id: "__alloyId31"
+    });
+    $.__views.__alloyId30.add($.__views.__alloyId31);
+    $.__views.__alloyId32 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "#000",
@@ -20,14 +31,29 @@ function Controller() {
             fontFamily: "Helvetica Neue"
         },
         textAlign: "center",
-        text: "Settings",
-        id: "__alloyId14"
+        text: "Made In Reno",
+        top: "10",
+        id: "__alloyId32"
     });
-    $.__views.__alloyId13.add($.__views.__alloyId14);
+    $.__views.__alloyId31.add($.__views.__alloyId32);
+    $.__views.version = Ti.UI.createLabel({
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        color: "#000",
+        font: {
+            fontSize: 20,
+            fontFamily: "Helvetica Neue"
+        },
+        textAlign: "center",
+        text: "Version: 1.0",
+        id: "version",
+        top: "10"
+    });
+    $.__views.__alloyId31.add($.__views.version);
     $.__views.settings = Ti.UI.createTab({
-        window: $.__views.__alloyId13,
+        window: $.__views.__alloyId29,
         title: "Settings",
-        icon: "images/airplane.png",
+        icon: "images/settings_off.png",
         id: "settings"
     });
     $.__views.settings && $.addTopLevelView($.__views.settings);
