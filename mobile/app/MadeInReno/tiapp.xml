@@ -7,7 +7,7 @@
     <property name="acs-oauth-key-development" type="string">n0QrYiIvj1LQ9gxuNKs8CUWCqPoQjMK5</property>
     <property name="acs-api-key-development" type="string">aIBF10D54m1YbkxT17hfan9uZa2jUcog</property>
     <id>org.madeinreno.app</id>
-    <name>Made In Reno</name>
+    <name>MadeInReno</name>
     <version>0.2.0</version>
     <publisher>joe</publisher>
     <url>http://madeinreno.org</url>
