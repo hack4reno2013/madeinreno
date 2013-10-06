@@ -5,9 +5,9 @@ function Controller() {
             amount: amount,
             type: type
         };
-        var reloadController = Alloy.createController("reload_confirm", args);
-        reloadController.getView().open();
-        $.reload.close();
+        {
+            Alloy.createController("reload_confirm", args);
+        }
     }
     function amountSliderChanged(e) {
         Ti.API.debug("reload." + arguments.callee.name + ": " + JSON.stringify(e));
@@ -18,13 +18,13 @@ function Controller() {
         Ti.API.debug("reload." + arguments.callee.name + ": " + JSON.stringify(e));
         $.reload.close();
     }
+    function clickBackAndroid(e) {
+        Ti.API.debug("reload." + arguments.callee.name + ": " + JSON.stringify(e));
+        $.navGroupWidget.close();
+    }
     function paymentTypeChanged(e) {
         Ti.API.debug("reload." + arguments.callee.name + ": " + JSON.stringify(e));
         type = e.selectedValue[0];
-    }
-    function close() {
-        Ti.API.trace("reload." + arguments.callee.name);
-        $.reload.close();
     }
     function open() {
         Ti.API.trace("reload." + arguments.callee.name);
@@ -37,20 +37,26 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.reload = Ti.UI.createWindow({
-        backgroundColor: "#fff",
+    $.__views.contactView = Ti.UI.createView({
         fullscreen: "false",
-        title: "Reload",
-        id: "reload"
+        id: "contactView"
     });
-    $.__views.reload && $.addTopLevelView($.__views.reload);
-    open ? $.__views.reload.addEventListener("open", open) : __defers["$.__views.reload!open!open"] = true;
-    close ? $.__views.reload.addEventListener("close", close) : __defers["$.__views.reload!close!close"] = true;
+    $.__views.contactView && $.addTopLevelView($.__views.contactView);
     $.__views.navGroupWin = Ti.UI.createWindow({
         backgroundColor: "#fff",
         id: "navGroupWin",
+        fullscreen: "false",
+        layout: "vertical",
         title: "Reload"
     });
+    $.__views.contactView.add($.__views.navGroupWin);
+    open ? $.__views.navGroupWin.addEventListener("open", open) : __defers["$.__views.navGroupWin!open!open"] = true;
+    $.__views.__alloyId59 = Ti.UI.createButton({
+        title: "Back",
+        id: "__alloyId59"
+    });
+    $.__views.navGroupWin.add($.__views.__alloyId59);
+    clickBackAndroid ? $.__views.__alloyId59.addEventListener("click", clickBackAndroid) : __defers["$.__views.__alloyId59!click!clickBackAndroid"] = true;
     $.__views.scroll = Ti.UI.createScrollView({
         contentWidth: "auto",
         contentHeight: "auto",
@@ -59,12 +65,12 @@ function Controller() {
         id: "scroll"
     });
     $.__views.navGroupWin.add($.__views.scroll);
-    $.__views.__alloyId17 = Ti.UI.createView({
+    $.__views.__alloyId60 = Ti.UI.createView({
         layout: "vertical",
-        id: "__alloyId17"
+        id: "__alloyId60"
     });
-    $.__views.scroll.add($.__views.__alloyId17);
-    $.__views.__alloyId18 = Ti.UI.createLabel({
+    $.__views.scroll.add($.__views.__alloyId60);
+    $.__views.__alloyId61 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "#000",
@@ -75,26 +81,26 @@ function Controller() {
         textAlign: "center",
         text: "Reload Card",
         top: "5",
-        id: "__alloyId18"
+        id: "__alloyId61"
     });
-    $.__views.__alloyId17.add($.__views.__alloyId18);
-    $.__views.__alloyId19 = Ti.UI.createImageView({
+    $.__views.__alloyId60.add($.__views.__alloyId61);
+    $.__views.__alloyId62 = Ti.UI.createImageView({
         top: "10",
         image: "qrcode.png",
         width: Ti.UI.SIZE,
-        id: "__alloyId19"
+        id: "__alloyId62"
     });
-    $.__views.__alloyId17.add($.__views.__alloyId19);
-    $.__views.__alloyId20 = Ti.UI.createSlider({
+    $.__views.__alloyId60.add($.__views.__alloyId62);
+    $.__views.__alloyId63 = Ti.UI.createSlider({
         width: "80%",
         top: "10",
         min: "5",
         max: "100",
         value: "5",
-        id: "__alloyId20"
+        id: "__alloyId63"
     });
-    $.__views.__alloyId17.add($.__views.__alloyId20);
-    amountSliderChanged ? $.__views.__alloyId20.addEventListener("change", amountSliderChanged) : __defers["$.__views.__alloyId20!change!amountSliderChanged"] = true;
+    $.__views.__alloyId60.add($.__views.__alloyId63);
+    amountSliderChanged ? $.__views.__alloyId63.addEventListener("change", amountSliderChanged) : __defers["$.__views.__alloyId63!change!amountSliderChanged"] = true;
     $.__views.reloadAmount = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
@@ -108,8 +114,8 @@ function Controller() {
         top: "5",
         id: "reloadAmount"
     });
-    $.__views.__alloyId17.add($.__views.reloadAmount);
-    $.__views.__alloyId21 = Ti.UI.createLabel({
+    $.__views.__alloyId60.add($.__views.reloadAmount);
+    $.__views.__alloyId64 = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
         color: "#000",
@@ -120,57 +126,52 @@ function Controller() {
         textAlign: "center",
         text: "Payment Type",
         top: "10",
-        id: "__alloyId21"
+        id: "__alloyId64"
     });
-    $.__views.__alloyId17.add($.__views.__alloyId21);
+    $.__views.__alloyId60.add($.__views.__alloyId64);
     $.__views.picker = Ti.UI.createPicker({
         id: "picker",
         top: "0",
         selectionIndicator: "true"
     });
-    $.__views.__alloyId17.add($.__views.picker);
+    $.__views.__alloyId60.add($.__views.picker);
     $.__views.paymentType = Ti.UI.createPickerColumn({
         id: "paymentType"
     });
     $.__views.picker.add($.__views.paymentType);
-    $.__views.__alloyId23 = Ti.UI.createPickerRow({
+    $.__views.__alloyId66 = Ti.UI.createPickerRow({
         title: "PayPal",
-        id: "__alloyId23"
+        id: "__alloyId66"
     });
-    $.__views.paymentType.addRow($.__views.__alloyId23);
-    $.__views.__alloyId24 = Ti.UI.createPickerRow({
+    $.__views.paymentType.addRow($.__views.__alloyId66);
+    $.__views.__alloyId67 = Ti.UI.createPickerRow({
         title: "Visa",
-        id: "__alloyId24"
+        id: "__alloyId67"
     });
-    $.__views.paymentType.addRow($.__views.__alloyId24);
-    $.__views.__alloyId25 = Ti.UI.createPickerRow({
+    $.__views.paymentType.addRow($.__views.__alloyId67);
+    $.__views.__alloyId68 = Ti.UI.createPickerRow({
         title: "Mastercard",
-        id: "__alloyId25"
+        id: "__alloyId68"
     });
-    $.__views.paymentType.addRow($.__views.__alloyId25);
-    $.__views.__alloyId26 = Ti.UI.createPickerRow({
+    $.__views.paymentType.addRow($.__views.__alloyId68);
+    $.__views.__alloyId69 = Ti.UI.createPickerRow({
         title: "American Express",
-        id: "__alloyId26"
+        id: "__alloyId69"
     });
-    $.__views.paymentType.addRow($.__views.__alloyId26);
-    $.__views.__alloyId27 = Ti.UI.createPickerRow({
+    $.__views.paymentType.addRow($.__views.__alloyId69);
+    $.__views.__alloyId70 = Ti.UI.createPickerRow({
         title: "Discover",
-        id: "__alloyId27"
+        id: "__alloyId70"
     });
-    $.__views.paymentType.addRow($.__views.__alloyId27);
+    $.__views.paymentType.addRow($.__views.__alloyId70);
     paymentTypeChanged ? $.__views.picker.addEventListener("change", paymentTypeChanged) : __defers["$.__views.picker!change!paymentTypeChanged"] = true;
-    $.__views.__alloyId28 = Ti.UI.createButton({
+    $.__views.__alloyId71 = Ti.UI.createButton({
         top: "5",
         title: "Continue",
-        id: "__alloyId28"
+        id: "__alloyId71"
     });
-    $.__views.__alloyId17.add($.__views.__alloyId28);
-    continueClicked ? $.__views.__alloyId28.addEventListener("click", continueClicked) : __defers["$.__views.__alloyId28!click!continueClicked"] = true;
-    $.__views.navGroup = Ti.UI.iPhone.createNavigationGroup({
-        window: $.__views.navGroupWin,
-        id: "navGroup"
-    });
-    $.__views.reload.add($.__views.navGroup);
+    $.__views.__alloyId60.add($.__views.__alloyId71);
+    continueClicked ? $.__views.__alloyId71.addEventListener("click", continueClicked) : __defers["$.__views.__alloyId71!click!continueClicked"] = true;
     $.__views.navGroupWidget = Alloy.createWidget("com.orthlieb.navigationgroup", "widget", {
         id: "navGroupWidget"
     });
@@ -182,15 +183,13 @@ function Controller() {
     var leftNavButton = Alloy.createController("navBarButton").getView();
     leftNavButton.title = "Back";
     leftNavButton.addEventListener("click", clickBack);
-    $.navGroupWin.leftNavButton = leftNavButton;
-    $.navGroupWidget.init($.navGroup, {});
     $.navGroupWidget.open($.navGroupWin, {});
     Alloy.Globals.parent = $.navGroup;
-    __defers["$.__views.reload!open!open"] && $.__views.reload.addEventListener("open", open);
-    __defers["$.__views.reload!close!close"] && $.__views.reload.addEventListener("close", close);
-    __defers["$.__views.__alloyId20!change!amountSliderChanged"] && $.__views.__alloyId20.addEventListener("change", amountSliderChanged);
+    __defers["$.__views.navGroupWin!open!open"] && $.__views.navGroupWin.addEventListener("open", open);
+    __defers["$.__views.__alloyId59!click!clickBackAndroid"] && $.__views.__alloyId59.addEventListener("click", clickBackAndroid);
+    __defers["$.__views.__alloyId63!change!amountSliderChanged"] && $.__views.__alloyId63.addEventListener("change", amountSliderChanged);
     __defers["$.__views.picker!change!paymentTypeChanged"] && $.__views.picker.addEventListener("change", paymentTypeChanged);
-    __defers["$.__views.__alloyId28!click!continueClicked"] && $.__views.__alloyId28.addEventListener("click", continueClicked);
+    __defers["$.__views.__alloyId71!click!continueClicked"] && $.__views.__alloyId71.addEventListener("click", continueClicked);
     _.extend($, exports);
 }
 

@@ -1,7 +1,7 @@
 function WPATH(s) {
     var index = s.lastIndexOf("/");
     var path = -1 === index ? "com.orthlieb.navigationgroup/" + s : s.substring(0, index) + "/com.orthlieb.navigationgroup/" + s.substring(index + 1);
-    return path;
+    return true && 0 !== path.indexOf("/") ? "/" + path : path;
 }
 
 function Controller() {
@@ -18,36 +18,37 @@ function Controller() {
     _.extend($, $.__views);
     $.windowStack = [];
     $.navGroup;
-    $.init = function(navGroupWindow) {
-        $.navGroup = navGroupWindow;
-    };
+    $.init = function() {};
     exports.open = function(windowToOpen, options) {
         $.windowStack.push(windowToOpen);
         windowToOpen.addEventListener("close", function(e) {
             $.top === e.source && $.windowStack.pop();
             $.trigger("close", e);
         });
+        windowToOpen.addEventListener("android:back", function() {
+            $.close();
+        });
         windowToOpen.addEventListener("open", function(e) {
             $.trigger("open", e);
         });
         windowToOpen.navBarHidden = windowToOpen.navBarHidden || false;
-        $.navGroup.open(windowToOpen, options);
+        windowToOpen.open(options);
     };
     exports.back = function(options) {
         if ($.windowStack.length > 1) {
-            $.navGroup.close($.top, options);
+            $.top.close(options);
             return true;
         }
         return false;
     };
-    exports.close = function() {
+    exports.close = function(options) {
         $.back();
-        $.navGroup.getWindow().close();
+        $.top.close(options);
     };
     exports.home = function(options) {
         if ($.windowStack.length > 1) {
             var stack = $.windowStack.slice(0);
-            for (var i = stack.length - 1; i > 0; i--) $.navGroup.close(stack[i], options);
+            for (var i = stack.length - 1; i > 0; i--) stack[i].close(options);
         }
     };
     Object.defineProperty($, "top", {

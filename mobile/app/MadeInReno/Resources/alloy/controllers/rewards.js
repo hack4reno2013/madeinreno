@@ -6,23 +6,23 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.__alloyId33 = Ti.UI.createWindow({
+    $.__views.__alloyId34 = Ti.UI.createWindow({
         backgroundColor: "#fff",
         title: "Booty Rewards",
-        id: "__alloyId33"
-    });
-    $.__views.__alloyId34 = Ti.UI.createView({
-        layout: "vertical",
         id: "__alloyId34"
     });
-    $.__views.__alloyId33.add($.__views.__alloyId34);
     $.__views.__alloyId35 = Ti.UI.createView({
-        width: Ti.UI.FILL,
-        height: Ti.UI.SIZE,
+        layout: "vertical",
         id: "__alloyId35"
     });
     $.__views.__alloyId34.add($.__views.__alloyId35);
-    $.__views.__alloyId36 = Ti.UI.createLabel({
+    $.__views.__alloyId36 = Ti.UI.createView({
+        width: Ti.UI.FILL,
+        height: Ti.UI.SIZE,
+        id: "__alloyId36"
+    });
+    $.__views.__alloyId35.add($.__views.__alloyId36);
+    $.__views.__alloyId37 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "#000",
@@ -33,61 +33,61 @@ function Controller() {
         textAlign: "center",
         text: "Reno Booty Rewards",
         top: "10",
-        id: "__alloyId36"
+        id: "__alloyId37"
     });
-    $.__views.__alloyId35.add($.__views.__alloyId36);
-    $.__views.__alloyId37 = Ti.UI.createView({
+    $.__views.__alloyId36.add($.__views.__alloyId37);
+    $.__views.__alloyId38 = Ti.UI.createView({
         left: "25%",
         top: "10",
         height: Ti.UI.SIZE,
         width: Ti.UI.FILL,
         layout: "horizontal",
         horizontalWrap: "false",
-        id: "__alloyId37"
-    });
-    $.__views.__alloyId34.add($.__views.__alloyId37);
-    $.__views.__alloyId38 = Ti.UI.createImageView({
-        left: "5",
-        top: "5",
-        image: "images/glyphicons_012_heart.png",
         id: "__alloyId38"
     });
-    $.__views.__alloyId37.add($.__views.__alloyId38);
+    $.__views.__alloyId35.add($.__views.__alloyId38);
     $.__views.__alloyId39 = Ti.UI.createImageView({
         left: "5",
         top: "5",
         image: "images/glyphicons_012_heart.png",
         id: "__alloyId39"
     });
-    $.__views.__alloyId37.add($.__views.__alloyId39);
+    $.__views.__alloyId38.add($.__views.__alloyId39);
     $.__views.__alloyId40 = Ti.UI.createImageView({
         left: "5",
         top: "5",
         image: "images/glyphicons_012_heart.png",
         id: "__alloyId40"
     });
-    $.__views.__alloyId37.add($.__views.__alloyId40);
+    $.__views.__alloyId38.add($.__views.__alloyId40);
     $.__views.__alloyId41 = Ti.UI.createImageView({
         left: "5",
         top: "5",
         image: "images/glyphicons_012_heart.png",
         id: "__alloyId41"
     });
-    $.__views.__alloyId37.add($.__views.__alloyId41);
+    $.__views.__alloyId38.add($.__views.__alloyId41);
     $.__views.__alloyId42 = Ti.UI.createImageView({
         left: "5",
         top: "5",
         image: "images/glyphicons_012_heart.png",
         id: "__alloyId42"
     });
-    $.__views.__alloyId37.add($.__views.__alloyId42);
-    $.__views.__alloyId43 = Ti.UI.createView({
-        width: Ti.UI.FILL,
-        height: Ti.UI.SIZE,
+    $.__views.__alloyId38.add($.__views.__alloyId42);
+    $.__views.__alloyId43 = Ti.UI.createImageView({
+        left: "5",
+        top: "5",
+        image: "images/glyphicons_012_heart.png",
         id: "__alloyId43"
     });
-    $.__views.__alloyId34.add($.__views.__alloyId43);
-    $.__views.__alloyId44 = Ti.UI.createLabel({
+    $.__views.__alloyId38.add($.__views.__alloyId43);
+    $.__views.__alloyId44 = Ti.UI.createView({
+        width: Ti.UI.FILL,
+        height: Ti.UI.SIZE,
+        id: "__alloyId44"
+    });
+    $.__views.__alloyId35.add($.__views.__alloyId44);
+    $.__views.__alloyId45 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "#000",
@@ -98,11 +98,11 @@ function Controller() {
         textAlign: "center",
         text: "4 more Hearts needed to achive Red booty level",
         top: "10",
-        id: "__alloyId44"
+        id: "__alloyId45"
     });
-    $.__views.__alloyId43.add($.__views.__alloyId44);
+    $.__views.__alloyId44.add($.__views.__alloyId45);
     $.__views.rewards = Ti.UI.createTab({
-        window: $.__views.__alloyId33,
+        window: $.__views.__alloyId34,
         title: "Rewards",
         icon: "images/rewards_off.png",
         id: "rewards"

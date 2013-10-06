@@ -1,8 +1,9 @@
 function Controller() {
     function reloadClicked() {
         var args = {};
-        var reloadController = Alloy.createController("reload", args);
-        reloadController.getView().open();
+        {
+            Alloy.createController("reload", args);
+        }
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "card";

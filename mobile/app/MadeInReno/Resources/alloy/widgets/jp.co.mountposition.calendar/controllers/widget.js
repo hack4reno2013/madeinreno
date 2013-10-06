@@ -1,7 +1,7 @@
 function WPATH(s) {
     var index = s.lastIndexOf("/");
     var path = -1 === index ? "jp.co.mountposition.calendar/" + s : s.substring(0, index) + "/jp.co.mountposition.calendar/" + s.substring(index + 1);
-    return path;
+    return true && 0 !== path.indexOf("/") ? "/" + path : path;
 }
 
 function Controller() {
@@ -191,7 +191,7 @@ function Controller() {
     exports.select = function(day) {
         var touchEvent, _ref3;
         moment.isMoment(day) && (day = day.date());
-        touchEvent = "click";
+        touchEvent = "singletap";
         tile = null != (_ref3 = $.calendar) ? _ref3["" + day] : void 0;
         return null != tile ? tile.fireEvent(touchEvent, {
             source: tile

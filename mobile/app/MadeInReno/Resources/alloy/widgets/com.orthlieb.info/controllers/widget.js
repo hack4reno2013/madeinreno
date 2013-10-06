@@ -1,7 +1,7 @@
 function WPATH(s) {
     var index = s.lastIndexOf("/");
     var path = -1 === index ? "com.orthlieb.info/" + s : s.substring(0, index) + "/com.orthlieb.info/" + s.substring(index + 1);
-    return path;
+    return true && 0 !== path.indexOf("/") ? "/" + path : path;
 }
 
 function Controller() {
@@ -53,12 +53,21 @@ function Controller() {
             Ti.API.error("InfoButton: missing required parameter 'parent'.");
             return;
         }
-        $.systemButton || $.icon || ($.systemButton = Ti.UI.iPhone.SystemButton.INFO_LIGHT);
-        parentWindow.remove($.button);
-        parentWindow.rightNavButton = $.button;
-        $.button.addEventListener("click", function(e) {
-            $.trigger("click", e);
-        });
+        $.button.visible = false;
+        var temp = parentWindow.activity.onCreateOptionsMenu;
+        parentWindow.activity.onCreateOptionsMenu = function(e) {
+            var menu = e.menu;
+            var menuItem = menu.add({
+                title: $.text,
+                itemId: 7144,
+                showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM
+            });
+            $.icon && menuItem.setIcon($.icon);
+            menuItem.addEventListener("click", function(e) {
+                $.trigger("click", e);
+            });
+            temp && temp(e);
+        };
     };
     _.extend($, exports);
 }
