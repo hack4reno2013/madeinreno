@@ -6,7 +6,7 @@
 					<Label top="10" textAlign="center" width="Ti.UI.FILL">Made In Reno</Label>
 					<ImageView top="10" image="qrcode.png" width="Ti.UI.SIZE"></ImageView>
 					<Label top="10" textAlign="center" width="Ti.UI.FILL">Current Balance</Label>
-					<Label top="10" textAlign="center" width="Ti.UI.FILL">$0.00</Label>
+					<Label top="10" textAlign="center" width="Ti.UI.FILL" id="accountBalanceLabel">$0.00</Label>
 					<Button top="20" bottom="10" title="Reload" onClick="reloadClicked"/>
 				</View>
 			</ScrollView>

@@ -6,103 +6,103 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.__alloyId17 = Ti.UI.createWindow({
+    $.__views.__alloyId33 = Ti.UI.createWindow({
         backgroundColor: "#fff",
         title: "Booty Rewards",
-        id: "__alloyId17"
+        id: "__alloyId33"
     });
-    $.__views.__alloyId18 = Ti.UI.createView({
+    $.__views.__alloyId34 = Ti.UI.createView({
         layout: "vertical",
-        id: "__alloyId18"
+        id: "__alloyId34"
     });
-    $.__views.__alloyId17.add($.__views.__alloyId18);
-    $.__views.__alloyId19 = Ti.UI.createView({
+    $.__views.__alloyId33.add($.__views.__alloyId34);
+    $.__views.__alloyId35 = Ti.UI.createView({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
-        id: "__alloyId19"
+        id: "__alloyId35"
     });
-    $.__views.__alloyId18.add($.__views.__alloyId19);
-    $.__views.__alloyId20 = Ti.UI.createLabel({
+    $.__views.__alloyId34.add($.__views.__alloyId35);
+    $.__views.__alloyId36 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "#000",
         font: {
-            fontSize: 20,
+            fontSize: 16,
             fontFamily: "Helvetica Neue"
         },
         textAlign: "center",
         text: "Reno Booty Rewards",
         top: "10",
-        id: "__alloyId20"
+        id: "__alloyId36"
     });
-    $.__views.__alloyId19.add($.__views.__alloyId20);
-    $.__views.__alloyId21 = Ti.UI.createView({
+    $.__views.__alloyId35.add($.__views.__alloyId36);
+    $.__views.__alloyId37 = Ti.UI.createView({
         left: "25%",
         top: "10",
         height: Ti.UI.SIZE,
         width: Ti.UI.FILL,
         layout: "horizontal",
         horizontalWrap: "false",
-        id: "__alloyId21"
+        id: "__alloyId37"
     });
-    $.__views.__alloyId18.add($.__views.__alloyId21);
-    $.__views.__alloyId22 = Ti.UI.createImageView({
+    $.__views.__alloyId34.add($.__views.__alloyId37);
+    $.__views.__alloyId38 = Ti.UI.createImageView({
         left: "5",
         top: "5",
         image: "images/glyphicons_012_heart.png",
-        id: "__alloyId22"
+        id: "__alloyId38"
     });
-    $.__views.__alloyId21.add($.__views.__alloyId22);
-    $.__views.__alloyId23 = Ti.UI.createImageView({
+    $.__views.__alloyId37.add($.__views.__alloyId38);
+    $.__views.__alloyId39 = Ti.UI.createImageView({
         left: "5",
         top: "5",
         image: "images/glyphicons_012_heart.png",
-        id: "__alloyId23"
+        id: "__alloyId39"
     });
-    $.__views.__alloyId21.add($.__views.__alloyId23);
-    $.__views.__alloyId24 = Ti.UI.createImageView({
+    $.__views.__alloyId37.add($.__views.__alloyId39);
+    $.__views.__alloyId40 = Ti.UI.createImageView({
         left: "5",
         top: "5",
         image: "images/glyphicons_012_heart.png",
-        id: "__alloyId24"
+        id: "__alloyId40"
     });
-    $.__views.__alloyId21.add($.__views.__alloyId24);
-    $.__views.__alloyId25 = Ti.UI.createImageView({
+    $.__views.__alloyId37.add($.__views.__alloyId40);
+    $.__views.__alloyId41 = Ti.UI.createImageView({
         left: "5",
         top: "5",
         image: "images/glyphicons_012_heart.png",
-        id: "__alloyId25"
+        id: "__alloyId41"
     });
-    $.__views.__alloyId21.add($.__views.__alloyId25);
-    $.__views.__alloyId26 = Ti.UI.createImageView({
+    $.__views.__alloyId37.add($.__views.__alloyId41);
+    $.__views.__alloyId42 = Ti.UI.createImageView({
         left: "5",
         top: "5",
         image: "images/glyphicons_012_heart.png",
-        id: "__alloyId26"
+        id: "__alloyId42"
     });
-    $.__views.__alloyId21.add($.__views.__alloyId26);
-    $.__views.__alloyId27 = Ti.UI.createView({
+    $.__views.__alloyId37.add($.__views.__alloyId42);
+    $.__views.__alloyId43 = Ti.UI.createView({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
-        id: "__alloyId27"
+        id: "__alloyId43"
     });
-    $.__views.__alloyId18.add($.__views.__alloyId27);
-    $.__views.__alloyId28 = Ti.UI.createLabel({
+    $.__views.__alloyId34.add($.__views.__alloyId43);
+    $.__views.__alloyId44 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
         color: "#000",
         font: {
-            fontSize: 20,
+            fontSize: 16,
             fontFamily: "Helvetica Neue"
         },
         textAlign: "center",
         text: "4 more Hearts needed to achive Red booty level",
         top: "10",
-        id: "__alloyId28"
+        id: "__alloyId44"
     });
-    $.__views.__alloyId27.add($.__views.__alloyId28);
+    $.__views.__alloyId43.add($.__views.__alloyId44);
     $.__views.rewards = Ti.UI.createTab({
-        window: $.__views.__alloyId17,
+        window: $.__views.__alloyId33,
         title: "Rewards",
         icon: "images/rewards_off.png",
         id: "rewards"

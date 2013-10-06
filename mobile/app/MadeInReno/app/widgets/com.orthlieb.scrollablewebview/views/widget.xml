@@ -1,0 +1,10 @@
+<Alloy>
+    <View id="main">
+        <ScrollableView id="scrollableView" onScrollend="ScrollableViewScrollEnd"/>
+        <View id="toolbar" backgroundColor="grey">
+            <Button id="prevButton" onClick="PrevButtonClick"/>
+            <Label id="label"/>
+            <Button id="nextButton" onClick="NextButtonClick"/>
+        </View>
+    </View>
+</Alloy>

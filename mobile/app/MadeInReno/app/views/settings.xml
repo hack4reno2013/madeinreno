@@ -1,10 +1,13 @@
 <Alloy>
 	<Tab title="Settings" icon="images/settings_off.png">
-		<Window title="Settings">
+		<Window title="Settings" onOpen="open">
 			<ScrollView width="Ti.UI.SIZE" height="Ti.UI.SIZE">
 				<View layout="vertical">
-					<Label top="10">Made In Reno</Label>
+					<ImageView top="10" image="appicon.png"></ImageView>
+					<Label id="publisher" top="10">Made In Reno</Label>
 					<Label id="version" top="10">Version: 1.0</Label>
+					<Label id="url" top="10" onClick="urlClicked" color="blue">http://madeinreno.org</Label>
+					<Label id="copyright" top="10">Copyright © 2013 Made In Reno</Label>
 				</View>
 			</ScrollView>
 		</Window>

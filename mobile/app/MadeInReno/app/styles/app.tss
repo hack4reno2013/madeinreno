@@ -1,13 +1,24 @@
 "Window": {
 	backgroundColor: "#fff"
 },
+"ScrollView": {
+	contentWidth: 'auto',
+	contentHeight: 'auto',
+	showVerticalScrollIndicator: true,
+	showHorizontalScrollIndicator: true,
+},
 "Label": {
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
 	color: "#000",
 	font: {
-		fontSize: 20,
+		fontSize: 16,
 		fontFamily: 'Helvetica Neue'
 	},
 	textAlign: 'center'
-} 
+},
+"TextField": {
+		top: 5,
+	left: 5,
+	borderStyle: "Ti.UI.INPUT_BORDERSTYLE_ROUNDED"
+}

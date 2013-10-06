@@ -1,5 +1,5 @@
 <Alloy>
-	<TabGroup>
+	<TabGroup onOpen="open">
 		<Require src="card"/>
 		<Require src="rewards"/>
 		<Require src="stores"/>
