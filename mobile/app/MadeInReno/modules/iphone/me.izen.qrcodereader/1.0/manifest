@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+description: QR Code Reader
+author: Joe Chavez
+license: TBD
+copyright: Copyright (c) 2011 by izen.me
+
+
+# these should not be edited
+name: qrcodereader
+moduleid: me.izen.QRCodeReader
+guid: c86d407f-9304-489c-a1be-4b12f1949404
+platform: iphone
+minsdk: 1.7.5

@@ -28,7 +28,7 @@ module.exports = [ {
     style: {
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: "#000",
+        color: "000",
         font: {
             fontSize: 16,
             fontFamily: "Helvetica Neue"
@@ -45,8 +45,44 @@ module.exports = [ {
         borderStyle: "Ti.UI.INPUT_BORDERSTYLE_ROUNDED"
     }
 }, {
+    isClass: true,
+    priority: 10000.0005,
+    key: "reward_title",
+    style: {
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        color: "#FB0D0E",
+        font: {
+            fontSize: 20,
+            fontFamily: "Helvetica Neue"
+        },
+        textAlign: "center"
+    }
+}, {
+    isClass: true,
+    priority: 10000.0006,
+    key: "reward_item",
+    style: {
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        color: "#004080",
+        font: {
+            fontSize: 18,
+            fontFamily: "Helvetica Neue"
+        },
+        textAlign: "left"
+    }
+}, {
+    isClass: true,
+    priority: 10000.0007,
+    key: "reward_logo",
+    style: {
+        top: 15,
+        height: 64
+    }
+}, {
     isId: true,
-    priority: 100000.0007,
+    priority: 100000.001,
     key: "scrollableView",
     style: {
         left: 0,
@@ -62,7 +98,7 @@ module.exports = [ {
     queries: {
         formFactor: "isHandheld"
     },
-    priority: 100011.0008,
+    priority: 100011.0011,
     key: "toolbar",
     style: {
         left: 0,
@@ -76,7 +112,7 @@ module.exports = [ {
     queries: {
         formFactor: "isHandheld"
     },
-    priority: 100011.0009,
+    priority: 100011.0012,
     key: "prevButton",
     style: {
         left: 0,
@@ -92,7 +128,7 @@ module.exports = [ {
     queries: {
         formFactor: "isHandheld"
     },
-    priority: 100011.001,
+    priority: 100011.0013,
     key: "label",
     style: {
         font: {
@@ -109,7 +145,7 @@ module.exports = [ {
     queries: {
         formFactor: "isHandheld"
     },
-    priority: 100011.0011,
+    priority: 100011.0014,
     key: "nextButton",
     style: {
         right: 0,
@@ -125,7 +161,7 @@ module.exports = [ {
     queries: {
         formFactor: "isTablet"
     },
-    priority: 100011.0012,
+    priority: 100011.0015,
     key: "toolbar",
     style: {
         left: 0,
@@ -139,7 +175,7 @@ module.exports = [ {
     queries: {
         formFactor: "isTablet"
     },
-    priority: 100011.0013,
+    priority: 100011.0016,
     key: "prevButton",
     style: {
         left: 0,
@@ -155,7 +191,7 @@ module.exports = [ {
     queries: {
         formFactor: "isTablet"
     },
-    priority: 100011.0014,
+    priority: 100011.0017,
     key: "label",
     style: {
         font: {
@@ -172,7 +208,7 @@ module.exports = [ {
     queries: {
         formFactor: "isTablet"
     },
-    priority: 100011.0015,
+    priority: 100011.0018,
     key: "nextButton",
     style: {
         right: 0,

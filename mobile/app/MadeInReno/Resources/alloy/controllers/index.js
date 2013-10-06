@@ -51,10 +51,16 @@ function Controller() {
     $.__views.index.addTab($.__views.__alloyId14.getViewEx({
         recurse: true
     }));
-    $.__views.__alloyId16 = Alloy.createController("settings", {
+    $.__views.__alloyId16 = Alloy.createController("scan", {
         id: "__alloyId16"
     });
     $.__views.index.addTab($.__views.__alloyId16.getViewEx({
+        recurse: true
+    }));
+    $.__views.__alloyId18 = Alloy.createController("settings", {
+        id: "__alloyId18"
+    });
+    $.__views.index.addTab($.__views.__alloyId18.getViewEx({
         recurse: true
     }));
     $.__views.index && $.addTopLevelView($.__views.index);

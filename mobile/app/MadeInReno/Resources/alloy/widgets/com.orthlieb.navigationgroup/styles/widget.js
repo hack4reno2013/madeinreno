@@ -28,7 +28,7 @@ module.exports = [ {
     style: {
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: "#000",
+        color: "000",
         font: {
             fontSize: 16,
             fontFamily: "Helvetica Neue"
@@ -43,5 +43,41 @@ module.exports = [ {
         top: 5,
         left: 5,
         borderStyle: "Ti.UI.INPUT_BORDERSTYLE_ROUNDED"
+    }
+}, {
+    isClass: true,
+    priority: 10000.0005,
+    key: "reward_title",
+    style: {
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        color: "#FB0D0E",
+        font: {
+            fontSize: 20,
+            fontFamily: "Helvetica Neue"
+        },
+        textAlign: "center"
+    }
+}, {
+    isClass: true,
+    priority: 10000.0006,
+    key: "reward_item",
+    style: {
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        color: "#004080",
+        font: {
+            fontSize: 18,
+            fontFamily: "Helvetica Neue"
+        },
+        textAlign: "left"
+    }
+}, {
+    isClass: true,
+    priority: 10000.0007,
+    key: "reward_logo",
+    style: {
+        top: 15,
+        height: 64
     }
 } ];

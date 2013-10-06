@@ -51,12 +51,12 @@ function Controller() {
     });
     $.__views.contactView.add($.__views.navGroupWin);
     open ? $.__views.navGroupWin.addEventListener("open", open) : __defers["$.__views.navGroupWin!open!open"] = true;
-    $.__views.__alloyId59 = Ti.UI.createButton({
+    $.__views.__alloyId74 = Ti.UI.createButton({
         title: "Back",
-        id: "__alloyId59"
+        id: "__alloyId74"
     });
-    $.__views.navGroupWin.add($.__views.__alloyId59);
-    clickBackAndroid ? $.__views.__alloyId59.addEventListener("click", clickBackAndroid) : __defers["$.__views.__alloyId59!click!clickBackAndroid"] = true;
+    $.__views.navGroupWin.add($.__views.__alloyId74);
+    clickBackAndroid ? $.__views.__alloyId74.addEventListener("click", clickBackAndroid) : __defers["$.__views.__alloyId74!click!clickBackAndroid"] = true;
     $.__views.scroll = Ti.UI.createScrollView({
         contentWidth: "auto",
         contentHeight: "auto",
@@ -65,15 +65,15 @@ function Controller() {
         id: "scroll"
     });
     $.__views.navGroupWin.add($.__views.scroll);
-    $.__views.__alloyId60 = Ti.UI.createView({
+    $.__views.__alloyId75 = Ti.UI.createView({
         layout: "vertical",
-        id: "__alloyId60"
+        id: "__alloyId75"
     });
-    $.__views.scroll.add($.__views.__alloyId60);
-    $.__views.__alloyId61 = Ti.UI.createLabel({
+    $.__views.scroll.add($.__views.__alloyId75);
+    $.__views.__alloyId76 = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
-        color: "#000",
+        color: "000",
         font: {
             fontSize: 16,
             fontFamily: "Helvetica Neue"
@@ -81,30 +81,30 @@ function Controller() {
         textAlign: "center",
         text: "Reload Card",
         top: "5",
-        id: "__alloyId61"
+        id: "__alloyId76"
     });
-    $.__views.__alloyId60.add($.__views.__alloyId61);
-    $.__views.__alloyId62 = Ti.UI.createImageView({
+    $.__views.__alloyId75.add($.__views.__alloyId76);
+    $.__views.__alloyId77 = Ti.UI.createImageView({
         top: "10",
-        image: "qrcode.png",
+        image: "qr_transaction.png",
         width: Ti.UI.SIZE,
-        id: "__alloyId62"
+        id: "__alloyId77"
     });
-    $.__views.__alloyId60.add($.__views.__alloyId62);
-    $.__views.__alloyId63 = Ti.UI.createSlider({
+    $.__views.__alloyId75.add($.__views.__alloyId77);
+    $.__views.__alloyId78 = Ti.UI.createSlider({
         width: "80%",
         top: "10",
         min: "5",
         max: "100",
         value: "5",
-        id: "__alloyId63"
+        id: "__alloyId78"
     });
-    $.__views.__alloyId60.add($.__views.__alloyId63);
-    amountSliderChanged ? $.__views.__alloyId63.addEventListener("change", amountSliderChanged) : __defers["$.__views.__alloyId63!change!amountSliderChanged"] = true;
+    $.__views.__alloyId75.add($.__views.__alloyId78);
+    amountSliderChanged ? $.__views.__alloyId78.addEventListener("change", amountSliderChanged) : __defers["$.__views.__alloyId78!change!amountSliderChanged"] = true;
     $.__views.reloadAmount = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
-        color: "#000",
+        color: "000",
         font: {
             fontSize: 16,
             fontFamily: "Helvetica Neue"
@@ -114,11 +114,11 @@ function Controller() {
         top: "5",
         id: "reloadAmount"
     });
-    $.__views.__alloyId60.add($.__views.reloadAmount);
-    $.__views.__alloyId64 = Ti.UI.createLabel({
+    $.__views.__alloyId75.add($.__views.reloadAmount);
+    $.__views.__alloyId79 = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
-        color: "#000",
+        color: "000",
         font: {
             fontSize: 16,
             fontFamily: "Helvetica Neue"
@@ -126,52 +126,52 @@ function Controller() {
         textAlign: "center",
         text: "Payment Type",
         top: "10",
-        id: "__alloyId64"
+        id: "__alloyId79"
     });
-    $.__views.__alloyId60.add($.__views.__alloyId64);
+    $.__views.__alloyId75.add($.__views.__alloyId79);
     $.__views.picker = Ti.UI.createPicker({
         id: "picker",
         top: "0",
         selectionIndicator: "true"
     });
-    $.__views.__alloyId60.add($.__views.picker);
+    $.__views.__alloyId75.add($.__views.picker);
     $.__views.paymentType = Ti.UI.createPickerColumn({
         id: "paymentType"
     });
     $.__views.picker.add($.__views.paymentType);
-    $.__views.__alloyId66 = Ti.UI.createPickerRow({
+    $.__views.__alloyId81 = Ti.UI.createPickerRow({
         title: "PayPal",
-        id: "__alloyId66"
+        id: "__alloyId81"
     });
-    $.__views.paymentType.addRow($.__views.__alloyId66);
-    $.__views.__alloyId67 = Ti.UI.createPickerRow({
+    $.__views.paymentType.addRow($.__views.__alloyId81);
+    $.__views.__alloyId82 = Ti.UI.createPickerRow({
         title: "Visa",
-        id: "__alloyId67"
+        id: "__alloyId82"
     });
-    $.__views.paymentType.addRow($.__views.__alloyId67);
-    $.__views.__alloyId68 = Ti.UI.createPickerRow({
+    $.__views.paymentType.addRow($.__views.__alloyId82);
+    $.__views.__alloyId83 = Ti.UI.createPickerRow({
         title: "Mastercard",
-        id: "__alloyId68"
+        id: "__alloyId83"
     });
-    $.__views.paymentType.addRow($.__views.__alloyId68);
-    $.__views.__alloyId69 = Ti.UI.createPickerRow({
+    $.__views.paymentType.addRow($.__views.__alloyId83);
+    $.__views.__alloyId84 = Ti.UI.createPickerRow({
         title: "American Express",
-        id: "__alloyId69"
+        id: "__alloyId84"
     });
-    $.__views.paymentType.addRow($.__views.__alloyId69);
-    $.__views.__alloyId70 = Ti.UI.createPickerRow({
+    $.__views.paymentType.addRow($.__views.__alloyId84);
+    $.__views.__alloyId85 = Ti.UI.createPickerRow({
         title: "Discover",
-        id: "__alloyId70"
+        id: "__alloyId85"
     });
-    $.__views.paymentType.addRow($.__views.__alloyId70);
+    $.__views.paymentType.addRow($.__views.__alloyId85);
     paymentTypeChanged ? $.__views.picker.addEventListener("change", paymentTypeChanged) : __defers["$.__views.picker!change!paymentTypeChanged"] = true;
-    $.__views.__alloyId71 = Ti.UI.createButton({
+    $.__views.__alloyId86 = Ti.UI.createButton({
         top: "5",
         title: "Continue",
-        id: "__alloyId71"
+        id: "__alloyId86"
     });
-    $.__views.__alloyId60.add($.__views.__alloyId71);
-    continueClicked ? $.__views.__alloyId71.addEventListener("click", continueClicked) : __defers["$.__views.__alloyId71!click!continueClicked"] = true;
+    $.__views.__alloyId75.add($.__views.__alloyId86);
+    continueClicked ? $.__views.__alloyId86.addEventListener("click", continueClicked) : __defers["$.__views.__alloyId86!click!continueClicked"] = true;
     $.__views.navGroupWidget = Alloy.createWidget("com.orthlieb.navigationgroup", "widget", {
         id: "navGroupWidget"
     });
@@ -184,12 +184,11 @@ function Controller() {
     leftNavButton.title = "Back";
     leftNavButton.addEventListener("click", clickBack);
     $.navGroupWidget.open($.navGroupWin, {});
-    Alloy.Globals.parent = $.navGroup;
     __defers["$.__views.navGroupWin!open!open"] && $.__views.navGroupWin.addEventListener("open", open);
-    __defers["$.__views.__alloyId59!click!clickBackAndroid"] && $.__views.__alloyId59.addEventListener("click", clickBackAndroid);
-    __defers["$.__views.__alloyId63!change!amountSliderChanged"] && $.__views.__alloyId63.addEventListener("change", amountSliderChanged);
+    __defers["$.__views.__alloyId74!click!clickBackAndroid"] && $.__views.__alloyId74.addEventListener("click", clickBackAndroid);
+    __defers["$.__views.__alloyId78!change!amountSliderChanged"] && $.__views.__alloyId78.addEventListener("change", amountSliderChanged);
     __defers["$.__views.picker!change!paymentTypeChanged"] && $.__views.picker.addEventListener("change", paymentTypeChanged);
-    __defers["$.__views.__alloyId71!click!continueClicked"] && $.__views.__alloyId71.addEventListener("click", continueClicked);
+    __defers["$.__views.__alloyId86!click!continueClicked"] && $.__views.__alloyId86.addEventListener("click", continueClicked);
     _.extend($, exports);
 }
 

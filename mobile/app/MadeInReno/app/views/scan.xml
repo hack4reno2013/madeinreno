@@ -1,0 +1,8 @@
+<Alloy>
+	<Tab title="Scan" icon="images/scan_off.png">
+		<Window title="Scan" onOpen="open">
+			<Button image="images/scan_on.png" title="Scan Code" platform="ios" onClick="scanClicked"/>
+			<Label platform="android">Scanning is not yet supported on Android.</Label>
+		</Window>
+	</Tab>
+</Alloy>

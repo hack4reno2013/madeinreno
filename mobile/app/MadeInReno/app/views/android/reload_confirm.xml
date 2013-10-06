@@ -1,0 +1,17 @@
+<Alloy>
+	<View fullscreen="false" onOpen="open" title="Reload Confirm">
+		<Window id="navGroupWin" fullscreen="false" layout="vertical" class="container" onOpen="open" title="Reload Confirm">
+			<Button title="Change" onClick="clickBackAndroid"></Button>
+			<ScrollView id="scroll">
+				<View layout="vertical">
+					<Label top="5">Summary</Label>
+					<Label width="Ti.UI.FILL" id="reloadAmount">$0</Label>
+					<Label width="Ti.UI.FILL" id="paymentType">None</Label>
+					<Button buttom="20" left="25" height="40" title="Confirm" onClick="confirmClicked"/>
+					<Button buttom="20" right="25" height="40" top="-40" title="Cancel" onClick="cancelClicked"/>
+				</View>
+			</ScrollView>
+		</Window>
+	</View>
+	<Widget src="com.orthlieb.navigationgroup" id="navGroupWidget"/>
+</Alloy>

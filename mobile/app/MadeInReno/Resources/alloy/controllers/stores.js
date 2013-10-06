@@ -45,70 +45,70 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.__alloyId50 = Ti.UI.createWindow({
+    $.__views.__alloyId65 = Ti.UI.createWindow({
         backgroundColor: "#fff",
         title: "Booty Stores",
-        id: "__alloyId50"
+        id: "__alloyId65"
     });
-    open ? $.__views.__alloyId50.addEventListener("open", open) : __defers["$.__views.__alloyId50!open!open"] = true;
-    var __alloyId51 = [];
-    $.__views.__alloyId52 = Ti.Map.createAnnotation({
+    open ? $.__views.__alloyId65.addEventListener("open", open) : __defers["$.__views.__alloyId65!open!open"] = true;
+    var __alloyId66 = [];
+    $.__views.__alloyId67 = Ti.Map.createAnnotation({
         latitude: 39.52445,
         longitude: -119.81961,
         title: "Pneumatic Diner",
-        id: "__alloyId52"
+        id: "__alloyId67"
     });
-    __alloyId51.push($.__views.__alloyId52);
-    $.__views.__alloyId53 = Ti.Map.createAnnotation({
+    __alloyId66.push($.__views.__alloyId67);
+    $.__views.__alloyId68 = Ti.Map.createAnnotation({
         latitude: 39.518327,
         longitude: -119.809545,
         title: "Classic Skate Shop",
-        id: "__alloyId53"
+        id: "__alloyId68"
     });
-    __alloyId51.push($.__views.__alloyId53);
-    $.__views.__alloyId54 = Ti.Map.createAnnotation({
+    __alloyId66.push($.__views.__alloyId68);
+    $.__views.__alloyId69 = Ti.Map.createAnnotation({
         latitude: 39.519286,
         longitude: -119.807642,
         title: "NeverEnder",
-        id: "__alloyId54"
+        id: "__alloyId69"
     });
-    __alloyId51.push($.__views.__alloyId54);
-    $.__views.__alloyId55 = Ti.Map.createAnnotation({
+    __alloyId66.push($.__views.__alloyId69);
+    $.__views.__alloyId70 = Ti.Map.createAnnotation({
         latitude: 39.519204,
         longitude: -119.810351,
         title: "Great Full Gardens",
-        id: "__alloyId55"
+        id: "__alloyId70"
     });
-    __alloyId51.push($.__views.__alloyId55);
-    $.__views.__alloyId56 = Ti.Map.createAnnotation({
+    __alloyId66.push($.__views.__alloyId70);
+    $.__views.__alloyId71 = Ti.Map.createAnnotation({
         latitude: 39.515419,
         longitude: -119.807498,
         title: "Junkee",
-        id: "__alloyId56"
+        id: "__alloyId71"
     });
-    __alloyId51.push($.__views.__alloyId56);
-    $.__views.__alloyId57 = Ti.Map.createAnnotation({
+    __alloyId66.push($.__views.__alloyId71);
+    $.__views.__alloyId72 = Ti.Map.createAnnotation({
         latitude: 39.519264,
         longitude: -119.81237,
         title: "Too Soul Tea",
-        id: "__alloyId57"
+        id: "__alloyId72"
     });
-    __alloyId51.push($.__views.__alloyId57);
-    $.__views.__alloyId58 = Ti.Map.createAnnotation({
+    __alloyId66.push($.__views.__alloyId72);
+    $.__views.__alloyId73 = Ti.Map.createAnnotation({
         latitude: 39.528069,
         longitude: -119.834731,
         title: "Poleletics",
-        id: "__alloyId58"
+        id: "__alloyId73"
     });
-    __alloyId51.push($.__views.__alloyId58);
+    __alloyId66.push($.__views.__alloyId73);
     $.__views.map = Ti.Map.createView({
-        annotations: __alloyId51,
+        annotations: __alloyId66,
         ns: Ti.Map,
         id: "map"
     });
-    $.__views.__alloyId50.add($.__views.map);
+    $.__views.__alloyId65.add($.__views.map);
     $.__views.stores = Ti.UI.createTab({
-        window: $.__views.__alloyId50,
+        window: $.__views.__alloyId65,
         title: "Stores",
         icon: "images/store_off.png",
         id: "stores"
@@ -119,7 +119,7 @@ function Controller() {
     var lat, lon;
     var latDelta = .04;
     var lonDelta = .04;
-    __defers["$.__views.__alloyId50!open!open"] && $.__views.__alloyId50.addEventListener("open", open);
+    __defers["$.__views.__alloyId65!open!open"] && $.__views.__alloyId65.addEventListener("open", open);
     _.extend($, exports);
 }
 

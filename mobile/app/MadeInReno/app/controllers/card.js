@@ -1,5 +1,6 @@
 
-Alloy.Globals.accountBalance = 0;
+Alloy.Globals.accountBalance = 101;
+Alloy.Globals.bootyBalance = 36;
 
 function reloadClicked(e) {
 

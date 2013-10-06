@@ -36,7 +36,7 @@ function Controller() {
     $.__views.__alloyId4 = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
-        color: "#000",
+        color: "000",
         font: {
             fontSize: 16,
             fontFamily: "Helvetica Neue"
@@ -49,7 +49,7 @@ function Controller() {
     $.__views.__alloyId3.add($.__views.__alloyId4);
     $.__views.__alloyId5 = Ti.UI.createImageView({
         top: "10",
-        image: "qrcode.png",
+        image: "qr_transaction.png",
         width: Ti.UI.SIZE,
         id: "__alloyId5"
     });
@@ -57,7 +57,7 @@ function Controller() {
     $.__views.__alloyId6 = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
-        color: "#000",
+        color: "000",
         font: {
             fontSize: 16,
             fontFamily: "Helvetica Neue"
@@ -71,7 +71,7 @@ function Controller() {
     $.__views.accountBalanceLabel = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
-        color: "#000",
+        color: "000",
         font: {
             fontSize: 16,
             fontFamily: "Helvetica Neue"
@@ -99,7 +99,8 @@ function Controller() {
     $.__views.card && $.addTopLevelView($.__views.card);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    Alloy.Globals.accountBalance = 0;
+    Alloy.Globals.accountBalance = 101;
+    Alloy.Globals.bootyBalance = 36;
     Ti.App.addEventListener("account.balance_updated", function() {
         $.accountBalanceLabel.text = String.format("$%d", Alloy.Globals.accountBalance);
     });

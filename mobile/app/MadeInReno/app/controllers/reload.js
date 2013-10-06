@@ -65,4 +65,3 @@ if (OS_IOS) {
     $.navGroupWidget.open($.navGroupWin, {});
 }
 
-Alloy.Globals.parent = $.navGroup;

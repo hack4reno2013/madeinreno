@@ -121,7 +121,7 @@ function Controller() {
         _.extend(o, {
             width: Ti.UI.SIZE,
             height: Ti.UI.SIZE,
-            color: "#000",
+            color: "000",
             font: {
                 fontSize: 16,
                 fontFamily: "Helvetica Neue"

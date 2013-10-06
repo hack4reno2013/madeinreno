@@ -5,7 +5,7 @@
 				<ScrollView id="scroll">
 					<View layout="vertical">
 						<Label top="5">Reload Card</Label>
-						<ImageView top="10" image="qrcode.png" width="Ti.UI.SIZE"></ImageView>
+						<ImageView top="10" image="qr_transaction.png" width="Ti.UI.SIZE"></ImageView>
 						<Slider width="80%" top="10" min="5" max="100" value="5" onChange="amountSliderChanged"></Slider>
 						<Label width="Ti.UI.FILL" textAlign="center" top="5" id="reloadAmount">$5</Label>
 						<Label top="10" textAlign="center" width="Ti.UI.FILL">Payment Type</Label>

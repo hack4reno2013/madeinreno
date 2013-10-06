@@ -1,5 +1,5 @@
 "Window": {
-	backgroundColor: "#fff"
+	backgroundColor: '#fff'
 },
 "ScrollView": {
 	contentWidth: 'auto',
@@ -10,7 +10,7 @@
 "Label": {
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
-	color: "#000",
+	color: '000',
 	font: {
 		fontSize: 16,
 		fontFamily: 'Helvetica Neue'
@@ -21,4 +21,28 @@
 		top: 5,
 	left: 5,
 	borderStyle: "Ti.UI.INPUT_BORDERSTYLE_ROUNDED"
+},
+".reward_title": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: '#FB0D0E',
+	font: {
+		fontSize: 20,
+		fontFamily: 'Helvetica Neue'
+	},
+	textAlign: 'center'
+},
+".reward_item": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: '#004080',
+	font: {
+		fontSize: 18,
+		fontFamily: 'Helvetica Neue'
+	},
+	textAlign: 'left'
+},
+".reward_logo": {
+	top: 15,
+height: 64
 }
